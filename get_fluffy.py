@@ -36,11 +36,9 @@ read_response = response.readlines()
 possible = []
 
 for line in read_response:
-
 	line = line.decode('utf-8')
-	
-	if '<img alt="" src="' in line:
-		image_url = line.split('src="//')[1].split('"')[0]
+        if '<img alt="" src="' in line:
+                image_url = line.split('src="//')[1].split('"')[0]
 		possible.append('http://'+image_url)
 
 # Now select a random image to show
