@@ -1,7 +1,7 @@
 # Fluffy Happiness: Test code to grab pictures of cute animals from the Internet
 # Usage: >> python get_fluffy.py [options]
 # V.A. Moss (vmoss.astro@gmail.com)
-__author__ = "V.A. Moss"
+__author__ = "V.A. Moss smells"
 __date__ = "$22-oct-2018 22:00:00$"
 __version__ = "0.2"
 
@@ -38,6 +38,7 @@ possible = []
 for line in read_response:
 
 	line = line.decode('utf-8')
+	print(line)
 	
 	if '<img alt="" src="' in line:
 		image_url = line.split('src="//')[1].split('"')[0]
