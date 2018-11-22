@@ -1,3 +1,5 @@
+# Emma's change
+# another change
 # Fluffy Happiness: Test code to grab pictures of cute animals from the Internet
 # Usage: >> python get_fluffy.py [options]
 # V.A. Moss (vmoss.astro@gmail.com)
