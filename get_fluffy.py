@@ -1,16 +1,20 @@
+
 # Emma's change
 # another change
-# Fluffy Happiness: Test code to grab pictures of cute animals from the Internet
-# Usage: >> python get_fluffy.py [options]
-# V.A. Moss (vmoss.astro@gmail.com)
-__author__ = "V.A. Moss smells nice"
+# Fluffy Happiness: Test code to grab pictures of cute animals from
+# the Internet
+# Usage: >> python get_fluffy.py [options] V.A. Moss
+# (vmoss.astro@gmail.com)
+__author__ = "V.A. Moss"
 __date__ = "$22-oct-2018 22:00:00$"
 __version__ = "0.2"
 
 # Imports
 import os
 import sys
-import urllib.request, urllib.error, urllib.parse
+import urllib.request
+import urllib.error
+import urllib.parse
 import ssl
 from random import randint
 import matplotlib.pyplot as plt
@@ -19,9 +23,9 @@ from argparse import ArgumentParser, RawTextHelpFormatter
 
 parser = ArgumentParser(formatter_class=RawTextHelpFormatter)
 parser.add_argument('-k', '--keywords',
-		default='cute fluffy animal',
-		type=str,
-		help='Specify which kind of search to do(default: %(default)s)')
+		    default='cute fluffy animal',
+		    type=str,
+		    help='Specify which kind of search to do(default: %(default)s)')
 
 # Parse the arguments above
 args = parser.parse_args()
@@ -63,4 +67,3 @@ imgplot = plt.imshow(img)
 plt.show()
 
 # Bla bla bla
-
