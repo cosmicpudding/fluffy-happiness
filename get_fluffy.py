@@ -34,7 +34,7 @@ args = parser.parse_args()
 path = 'https://imgur.com/search/score?q=%s' % ('+'.join(args.keywords.split()))
 
 # ONLY GET PUPPIES!!!!!
-path = 'https://imgur.com/search/score?q=%s' % ('+puppy'))
+path = 'https://imgur.com/search/score?q=%s' % ('+puppy')
 
 # Get data from website
 request = urllib.request.Request(path)
