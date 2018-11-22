@@ -58,7 +58,7 @@ print ("Prepare to cuddle ......")
 # Download the image and display it
 # note: imgur adds a b to names for some reason.
 img_name = (possible[rand_int].split('b.jpg')[0]+'.jpg').split('/')[-1]
-image_path = 'https://i.imgur.com/'+img_name
+image_path = 'https://i.imgur.com/' + img_name
 urllib.request.urlretrieve('%s' % image_path,'%s' % img_name)
 
 # Show the image in matplotlib
