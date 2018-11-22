@@ -47,7 +47,7 @@ for line in read_response:
 # Now select a random image to show
 rand_int = randint(0,len(possible)-1)
 print("I've selected image #%i: %s" % (rand_int,possible[rand_int]))
-
+print ("Prepare to cuddle ......")
 # Download the image and display it
 # note: imgur adds a b to names for some reason.
 img_name = (possible[rand_int].split('b.jpg')[0]+'.jpg').split('/')[-1]
