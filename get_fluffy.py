@@ -2,8 +2,8 @@
 # Usage: >> python get_fluffy.py [options]
 # V.A. Moss (vmoss.astro@gmail.com)
 __author__ = "V.A. Moss"
-__date__ = "$14-oct-2018 22:00:00$"
-__version__ = "0.1"
+__date__ = "$22-oct-2018 22:00:00$"
+__version__ = "0.2"
 
 # Imports
 import os
@@ -13,9 +13,19 @@ import ssl
 from random import randint
 import matplotlib.pyplot as plt
 import matplotlib.image as mpimg
+from argparse import ArgumentParser, RawTextHelpFormatter
+
+parser = ArgumentParser(formatter_class=RawTextHelpFormatter)
+parser.add_argument('-k', '--keywords',
+		default='cute fluffy animal',
+		type=str,
+		help='Specify which kind of search to do(default: %(default)s)')
+
+# Parse the arguments above
+args = parser.parse_args()
 
 # Path format
-path = 'https://imgur.com/search/score?q=cute+fluffy+animal'
+path = 'https://imgur.com/search/score?q=%s' % ('+'.join(args.keywords.split()))
 
 # Get data from website
 request = urllib.request.Request(path)
