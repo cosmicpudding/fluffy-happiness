@@ -62,7 +62,7 @@ image_path = 'https://i.imgur.com/' + img_name
 urllib.request.urlretrieve('%s' % image_path,'%s' % img_name)
 
 # Show the image in matplotlib
-img=mpimg.imread('%s' % img_name)
+img = mpimg.imread(img_name)
 imgplot = plt.imshow(img)
 plt.show()
 
