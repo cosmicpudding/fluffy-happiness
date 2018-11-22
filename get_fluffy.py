@@ -59,3 +59,5 @@ img=mpimg.imread('%s' % img_name)
 imgplot = plt.imshow(img)
 plt.show()
 
+# Bla bla bla
+
