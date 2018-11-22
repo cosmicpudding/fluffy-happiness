@@ -1,3 +1,6 @@
+
+# Emma's change
+# another change
 # Fluffy Happiness: Test code to grab pictures of cute animals from
 # the Internet
 # Usage: >> python get_fluffy.py [options] V.A. Moss
@@ -30,6 +33,9 @@ args = parser.parse_args()
 # Path format
 path = 'https://imgur.com/search/score?q=%s' % ('+'.join(args.keywords.split()))
 
+# ONLY GET PUPPIES!!!!!
+path = 'https://imgur.com/search/score?q=%s' % ('+puppy'))
+
 # Get data from website
 request = urllib.request.Request(path)
 response = urllib.request.urlopen(request, context=ssl._create_unverified_context())
@@ -39,9 +45,8 @@ read_response = response.readlines()
 possible = []
 
 for line in read_response:
-
 	line = line.decode('utf-8')
-	
+	print(line)
 	if '<img alt="" src="' in line:
 		image_url = line.split('src="//')[1].split('"')[0]
 		possible.append('http://'+image_url)
@@ -49,7 +54,7 @@ for line in read_response:
 # Now select a random image to show
 rand_int = randint(0,len(possible)-1)
 print("I've selected image #%i: %s" % (rand_int,possible[rand_int]))
-
+print ("Prepare to cuddle ......")
 # Download the image and display it
 # note: imgur adds a b to names for some reason.
 img_name = (possible[rand_int].split('b.jpg')[0]+'.jpg').split('/')[-1]
@@ -60,3 +65,5 @@ urllib.request.urlretrieve('%s' % image_path,'%s' % img_name)
 img=mpimg.imread('%s' % img_name)
 imgplot = plt.imshow(img)
 plt.show()
+
+# Bla bla bla
