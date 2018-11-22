@@ -60,4 +60,3 @@ urllib.request.urlretrieve('%s' % image_path,'%s' % img_name)
 img=mpimg.imread('%s' % img_name)
 imgplot = plt.imshow(img)
 plt.show()
-
